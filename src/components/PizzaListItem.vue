@@ -11,6 +11,7 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
         props: {
             pizzaData: Object,
@@ -21,6 +22,18 @@
                 description: this.pizzaData.description,
                 nickname: this.pizzaData.nickname,
                 imageurl: this.pizzaData.imageurl
+            }
+        },
+        methods: {
+            getPizza () {
+                axios.get('URL HERE')
+                    .then((response) => {
+                        console.log(response.data)
+                        this.pizza = response.data
+                    })
+                    .catch(error => {
+                        console.log(error   )
+                    })
             }
         }
     }
