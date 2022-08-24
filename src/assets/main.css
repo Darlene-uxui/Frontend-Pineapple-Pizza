@@ -16,16 +16,41 @@ li {
     grid-template-columns: 1fr 3fr 1fr;
     column-gap: 30px;
 }
+button {
+    background-color: orange; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 
 header {
     grid-column: span 3;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    background-image: url('https://www.publicdomainpictures.net/pictures/420000/velka/pineapple-wallpaper-pattern-1634293262za0.jpg');
+    background-repeat:repeat;
+    background-size: 600px;
+}
+
+header h1 {
+    font-size: 3em;
 }
 
 nav {
-    padding: 30px;
+    padding: 10px;
     border-right: 1px solid #ddd;
+}
+nav img {
+    width: 300px;
+}
+
+nav h3 {
+    text-align: center;
 }
 
 main {
@@ -42,15 +67,17 @@ main img {
     width: 100%;
 }
 
-main p {
-    margin-top: 30px;
-    line-height: 2em;
-    color: #777;
-}
-
 aside {
     padding: 30px;
     border-left: 1px solid #ddd;
+}
+
+aside img {
+    width: 300px;
+}
+
+aside h3 {
+    text-align: center;
 }
 
 footer {
@@ -58,43 +85,4 @@ footer {
     text-align: center;
     border-top: 1px solid #ddd;
     padding: 30px;
-}
-
-/* Responsive */
-@media screen and (max-width: 1200px) {
-    nav {
-    grid-column: span 3;
-    border-right: 0;
-    border-bottom: 1px solid #ddd;
-    }
-
-    nav li {
-    display: inline-block;
-    margin-right: 10px;
-    }
-
-    article {
-    grid-column: span 2;
-    }
-
-    aside {
-    padding: 16px;
-    }
-}
-
-@media screen and (max-width: 980px) {
-    nav,
-    article,
-    aside {
-    grid-column: span 3;
-    }
-
-    aside {
-    border-left: 0;
-    border-top: 1px solid #ddd;
-    }
-
-    article h2 {
-    font-size: 2.5em;
-    }
 }

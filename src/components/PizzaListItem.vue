@@ -1,13 +1,13 @@
 <template>
     <div class="pizza">
         <div class="pizza-box">
-            <p class="title">Title:{{ pizzaData.title }}</p>
-            <p class="description">Description:{{ pizzaData.description }}</p>
-            <p class="nickName">Nick Name:{{ pizzaData.nickname }}</p>
+            <p class="title"><b>Title:</b>{{ pizzaData.title }}</p>
+            <p class="description"><b>Description:</b>{{ pizzaData.description }}</p>
+            <p class="nickName"><b>Nick Name:</b>{{ pizzaData.nickname }}</p>
             <img class="image" :src="pizzaData.imageurl" alt="pizza image" />
         </div>
     </div>
-            <button class="delete-btn" @click="$emit('deletePizza', pizzaData.id)" type="button">Clear</button>
+        <button class="delete-btn" @click="$emit('deletePizza', pizzaData.id)" type="button">Delete</button>
 </template>
 
 <script>
@@ -27,7 +27,10 @@
 </script>
 
 <style scoped>
-
+    .pizza {
+        border: 1px solid black;
+        padding: 20px;
+    }
 .image {
     height: 200px;
     width: 300px;
