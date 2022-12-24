@@ -30,6 +30,7 @@
 
 .popup-inner {
     background-color: white;
+    width: 400px;
     padding: 2em;
     display: block;
 }

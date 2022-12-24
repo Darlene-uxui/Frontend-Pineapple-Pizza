@@ -43,7 +43,7 @@
       <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/kiwi-pineapple-1579003090.jpg" alt="">
     </aside>
     <footer>
-      <p>Formative by Lingyi, Grace, Darlene, Jannah</p>
+      <p>@Pineapple Pizza App</p>
     </footer>
   </div>
 
@@ -56,6 +56,14 @@ input {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #336a39;
 }
 </style>
 
@@ -88,6 +96,7 @@ export default {
       });
       const data = await response.text();
       this.getPizzas();
+      location.reload();
     },
 
     async getPizzas() {

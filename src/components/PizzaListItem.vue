@@ -6,9 +6,9 @@
             <p class="nickName"><b>Nick Name:</b>{{ pizzaData.nickname }}</p>
             <img class="image" :src="pizzaData.imageurl" alt="pizza image" />
         </div>
+        <button class="delete-btn" @click="$emit('deletePizza', pizzaData.id)" type="button">Delete</button>
+        <button @click="openModal">Edit</button>
     </div>
-    <button class="delete-btn" @click="$emit('deletePizza', pizzaData.id)" type="button">Delete</button>
-    <button @click="openModal">Edit</button>
     <popup v-if="showModal">
         <div class="popup-box">
             <p class="popup-title"><b>Title:</b></p>
@@ -26,6 +26,7 @@
 <script>
 import popup from "./popup.vue"
 export default {
+    emits: ["updatePizza", "deletePizza"],
     components: { popup },
     props: {
         pizzaData: Object,
@@ -58,10 +59,24 @@ export default {
 .pizza {
     border: 1px solid black;
     padding: 20px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.pizza p b {
+    margin-right: 1em;
 }
 
 .image {
     height: 200px;
     width: 300px;
+}
+
+.popup-box p {
+    margin-bottom: 0;
+}
+
+.popup-nickName b {
+    padding-right: 1em;
 }
 </style>
